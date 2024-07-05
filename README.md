@@ -32,7 +32,7 @@ implement this function so that it will create a `n x m`  matrix with all elemen
 	```
 
  - **random**
-implement this function so that it will create a `n x m`  matrix with all elements a random number between `min` and `max`.
+	implement this function so that it will create a `n x m`  matrix with all elements a random number between `min` and `max`.
 	```cpp
 	Matrix random(size_t n, size_t m, double min, double max)
 	```
@@ -40,7 +40,7 @@ implement this function so that it will create a `n x m`  matrix with all elemen
 
 
 - **show**
-implement this function so that it will display the matrix in a beautiful way.
+  implement this function so that it will display the matrix in a beautiful way.
     ```cpp
     void show(const Matrix& matrix)
     ```
@@ -96,13 +96,12 @@ implement this function so that it will create the minor of the input `matrix` w
     <br>
 
 - **determinant**
-implement this function so that it calculates the determinant of the input `matrix`. 
+	implement this function so that it calculates the determinant of the input `matrix`. 
     ```cpp
     double determinant(const Matrix& matrix)
     ```
     *you should only use the minor approach to calculate the determinant, any other methods (such as upper-triangular or ...) is not allowed.*
 	
-
 - **inverse**
 implement this function so that it generates the `matrix`'s inverse. 
 	```cpp
@@ -110,7 +109,7 @@ implement this function so that it generates the `matrix`'s inverse.
 	```
 
 - **concatenate**
-implement this function so that it will concatenate `matrix1` and `matrix2` along the specified axis. (`axis=0`: on top of each other | `axis=1`: alongside each other). 
+	implement this function so that it will concatenate `matrix1` and `matrix2` along the specified axis. (`axis=0`: on top of each other | `axis=1`: alongside each other). 
 	```cpp
 	Matrix concatenate(const Matrix& matrix1, const Matrix& matrix2, int axis=0)
 	```
@@ -122,7 +121,6 @@ implement this function so that it will concatenate `matrix1` and `matrix2` alon
     </p>
     <br>
 	
-
 - **elementary row operations**
 we  want to implement elementary row operation (ERO) functionality for our library. as you know we have 3 EROs:
 
@@ -134,25 +132,25 @@ we  want to implement elementary row operation (ERO) functionality for our libra
 
   So, lets define the following 3 functions to do this.
     - **swap**
-    swaps r<sub>1</sub><sup>th</sup> row with  r<sub>2</sub><sup>th</sup>.
+      swaps r<sub>1</sub><sup>th</sup> row with  r<sub>2</sub><sup>th</sup>.
         ```cpp
         Matrix ero_swap(const Matrix& matrix, size_t r1, size_t r2)
         ```
 		
     - **multiply**
-    multiplies every element in r<sup>th</sup> row with constant number `c`.
+      multiplies every element in r<sup>th</sup> row with constant number `c`.
         ```cpp
         Matrix ero_multiply(const Matrix& matrix, size_t r, double c)
         ```
 
     - **sum**
-    adds &emsp; r<sub>1</sub><sup>th</sup> x c &emsp; into r<sub>2</sub><sup>th</sup> row.
+      adds &emsp; r<sub>1</sub><sup>th</sup> x c &emsp; into r<sub>2</sub><sup>th</sup> row.
         ```cpp
         Matrix ero_sum(const Matrix& matrix, size_t r1, double c, size_t r2)
         ```
 
 - **upper triangular**
-implement this function so that it will calculate the upper triangular form of the `matrix` using the ERO operations.
+	implement this function so that it will calculate the upper triangular form of the `matrix` using the ERO operations.
     ```cpp
     Matrix upper_triangular(const Matrix& matrix)
     ```
@@ -163,7 +161,8 @@ implement this function so that it will calculate the upper triangular form of t
     <img src="resources/upper_triangular1.png" alt="upper_triangular1"
     title="upper_triangular1" width="600" align="middle" />
     </p>
-      <br/>
+  
+  
     <br/>
   
     use the same trick to zero out `l`, using `j` like the following.
@@ -174,8 +173,7 @@ implement this function so that it will calculate the upper triangular form of t
     <img src="resources/upper_triangular2.png" alt="upper_triangular2"
     title="upper_triangular2" width="500" align="middle" />
     </p>
-      <br/>
-      <br/>
+  
   
     ***bonus question** what happens if we come across a zero on our main diagonal for example `a` or `j` in the example above? solve this problem.*
 
